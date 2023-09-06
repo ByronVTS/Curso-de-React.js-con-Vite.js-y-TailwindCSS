@@ -4,9 +4,12 @@ import { ShoppingCartContext } from "..//../Context"
 import {PlusIcon} from  '@heroicons/react/24/solid'
 
 const Card = (data) => {
+    // tener en cuenta que el context es donde es contenido el proveedor con toda las funciones y para usar esas funciones necesitamos tenemos que colocar asi onClick={()=> context.openProductDetail()}
     const context = useContext(ShoppingCartContext)
     return(
-        <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'>
+        <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'
+            onClick={()=> context.openProductDetail()}
+        >
             <figure className='relative mb-2 w-full h-4/5'>
                 <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs p-1 m-2'>{data.data.category.name}</span>
                 <img src={data.data.images} alt={data.data.title} className="object-cover h-[100%] w-full rounded-lg"  />
