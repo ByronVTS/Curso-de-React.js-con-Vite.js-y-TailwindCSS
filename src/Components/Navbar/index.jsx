@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 // Los componentes NavLink se utilizan en React Router para crear enlaces de navegación que automáticamente aplicarán una clase cuando estén activos (es decir, cuando la ruta actual coincida con la ruta definida en el enlace).
 import { useContext } from "react"
 import { ShoppingCartContext } from "..//../Context"
+import {ShoppingBagIcon} from  '@heroicons/react/24/solid'
 
 
 const Navbar = () => {
@@ -91,7 +92,10 @@ const Navbar = () => {
             isActive ? activeStyle: undefined
           }>Sign In</NavLink>
         </li>
-        <li>🚛{context.count}</li>
+        <li className="flex items-center">
+          <ShoppingBagIcon className="h-6 w-6 text-lime-700"/>
+          <div>{context.count}</div>
+        </li>
       </ul>
     </nav>
   );
