@@ -6,9 +6,14 @@ import {PlusIcon} from  '@heroicons/react/24/solid'
 const Card = (data) => {
     // tener en cuenta que el context es donde es contenido el proveedor con toda las funciones y para usar esas funciones necesitamos tenemos que colocar asi onClick={()=> context.openProductDetail()}
     const context = useContext(ShoppingCartContext)
+    // creamos una constante con las funciones que necesitamos, en este caso el que habre el productDetail y otra donde manda la informacion para mostrar
+    const showProduct = (producDetail) => {
+        context.openProductDetail(),
+        context.setProductToShow(producDetail)
+    }
     return(
         <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'
-            onClick={()=> context.openProductDetail()}
+            onClick={()=> showProduct(data.data) }
         >
             <figure className='relative mb-2 w-full h-4/5'>
                 <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs p-1 m-2'>{data.data.category.name}</span>
