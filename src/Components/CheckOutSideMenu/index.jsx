@@ -8,7 +8,6 @@ import OrderCard from "../../Components/OrderCard"
 
 const ChekoutSideMenu = () => {
 const context = useContext(ShoppingCartContext)
-console.log('Cards:', context.cardProducts);
 
     return (
         <aside
@@ -22,7 +21,7 @@ console.log('Cards:', context.cardProducts);
                 ></XCircleIcon>
                 </div>
             </div>
-            <div className="px-6 ">
+            <div className="px-6  ">
             {
                 context.cartProducts.map((product) => (
                     <OrderCard 
