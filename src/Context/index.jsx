@@ -22,7 +22,7 @@ export const ShoppingCartProvider = ({ children }) => {
     // en useStatte ponemos unas llaves por que cuando obtenemos los datos bienen en forma de objeto  
     const [productToShow, setProductToShow]= useState({})
 
-        //Seccion donde se pone los productos en e carrito
+        //Seccion donde se pone los productos en el carrito
     const [cartProducts, setcartProducts] = useState([])
 
     return (

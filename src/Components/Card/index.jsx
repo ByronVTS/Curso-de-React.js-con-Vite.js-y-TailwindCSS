@@ -18,7 +18,6 @@ const Card = (data) => {
         context.setcartProducts([...context.cartProducts, productData])
         context.openCheckoutSideMenu()
         context.closeProductDetail()
-        console.log('Cards:', context.cardProducts);
     }
     return(
         <div className='bg-white cursor-pointer w-56 h-60 rounded-lg'
