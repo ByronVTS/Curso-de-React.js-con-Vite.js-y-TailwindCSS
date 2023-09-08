@@ -10,10 +10,13 @@ export const ShoppingCartProvider = ({ children }) => {
     const openProductDetail = () => setIsProductDetailOpen(true)
     const closeProductDetail = () => setIsProductDetailOpen(false)
 
-
+    
     // producto detail -- Show product
     // en useStatte ponemos unas llaves por que cuando obtenemos los datos bienen en forma de objeto  
     const [productToShow, setProductToShow]= useState({})
+
+        //Seccion donde se pone los productos en e carrito
+    const [cartProducts, setcartProducts] = useState([])
 
     return (
         <ShoppingCartContext.Provider value={{
@@ -23,7 +26,9 @@ export const ShoppingCartProvider = ({ children }) => {
             openProductDetail,
             closeProductDetail,
             productToShow,
-            setProductToShow
+            setProductToShow,
+            cartProducts,
+            setcartProducts
         }}>
             {children}
         </ShoppingCartContext.Provider>
