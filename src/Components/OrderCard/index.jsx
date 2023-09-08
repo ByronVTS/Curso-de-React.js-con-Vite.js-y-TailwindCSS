@@ -3,7 +3,7 @@ import {XCircleIcon} from  '@heroicons/react/24/solid'
 
 
 const OrderCard = props => {
-    const { title, price, imgURL } = props; // Corregido de imgeURL a imgURL
+    const {id, title, price, imgURL, handleDelete } = props; // Corregido de imgeURL a imgURL
 
     return(
         <div className="flex justify-between  items-center mb-4">
@@ -15,7 +15,7 @@ const OrderCard = props => {
             </div>
             <div className='flex items-center gap-2'>
                 <p className='text-lg font-medium'>{price}</p>
-                <XCircleIcon className='w-10 h-8 text-red-500 cursor-pointer'></XCircleIcon>
+                <XCircleIcon onClick={() => handleDelete(id)} className='w-10 h-8 text-red-500 cursor-pointer'></XCircleIcon>
             </div>
         </div>
     )
