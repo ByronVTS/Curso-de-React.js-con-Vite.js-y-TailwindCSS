@@ -1,0 +1,95 @@
+[33mcommit 80f7e79f65f78f4c3364eb3fdacc8b96ae9d3044[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Fri Sep 8 11:55:22 2023 -0500
+
+    Clase 19 borrando elementos del carrito de compras
+
+[33mcommit 8f9a55c1579178a824d6bbfcacfeee991b089df0[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Fri Sep 8 11:41:11 2023 -0500
+
+    Clase 18 evitando que se agregue mas de una vez un producto al carrito de compras
+
+[33mcommit 768d6aa28e125246a56399ac6a596ea0c61f0f04[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Thu Sep 7 23:42:22 2023 -0500
+
+    clase 17 agregando los productos al carrito
+
+[33mcommit c0c6ec209aa71cb5ebfb4b1a901167f8669e8959[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Thu Sep 7 22:36:09 2023 -0500
+
+    clase 16 ya se como crear n menu lateral para que muestre la info en el carrito de compras
+
+[33mcommit f7a6f62ec779907ed2bc31dc8065deeff905c6f0[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Thu Sep 7 21:59:04 2023 -0500
+
+    clase 15 bravo voy la mitad
+
+[33mcommit 2f9080fbd38ac6718629ba2a9c33316146c7cb98[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Wed Sep 6 22:39:49 2023 -0500
+
+    mostrar los detalles de producto en el lateral
+
+[33mcommit fa8161bc57636766a65d8bc3fab16b2ab2794cab[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Wed Sep 6 12:10:30 2023 -0500
+
+    Añadidos de funcion de abrir y cerrar panel de detalles de producto
+
+[33mcommit 0f832cf04a4fe5a7a1464ea690136c5b5dd2615b[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Wed Sep 6 11:06:43 2023 -0500
+
+    Uso de inconos y version mas estable
+
+[33mcommit 7f8b0c016316186a4bbbb9aa9144a3d984d85cf0[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Mon Sep 4 22:05:39 2023 -0500
+
+    clase 11 seccion de donde de compra los productos y sus detalles
+
+[33mcommit 218bdd1a5d2b171c11f17ad07d3ce9f9cde211f5[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Thu Aug 31 11:19:28 2023 -0500
+
+    Contador de productos añadidos al carrito listo
+
+[33mcommit e8c1691fb1ea4248af5de0131a7df0eda5779c8c[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Thu Aug 31 09:23:34 2023 -0500
+
+    Version estable despue de cosumir un API
+
+[33mcommit 456fe25429fcda5e41b652a4ae54b6f19c9c26f8[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Mon Aug 28 23:19:31 2023 -0500
+
+    Uso de la API para llenar las cards
+
+[33mcommit 5af9107bf5332746383c806d3492b20490e929e6[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Sun Aug 27 22:18:17 2023 -0500
+
+    Cambios de clase 6 7 p...
+
+[33mcommit 0f224d27340b35c793a01e81a91bf31e0379ee2d[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Sun Aug 27 22:17:57 2023 -0500
+
+    Clase 6 y 7 atrasado...
+
+[33mcommit 4b8888107f191236e4a047595d63fe22973abd2a[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Sun Aug 27 19:43:25 2023 -0500
+
+    agregaso camio sa
+
+[33mcommit ca6c4480a75e1902d9745811e17893dbc40dba35[m
+Author: Drend <byronthyto@gmail.com>
+Date:   Sun Aug 27 19:28:33 2023 -0500
+
+    Agregando archivos del proyecto y creacion del diseño del navbar
