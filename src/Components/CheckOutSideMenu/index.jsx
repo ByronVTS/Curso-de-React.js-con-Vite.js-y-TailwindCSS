@@ -4,6 +4,7 @@ import { useContext } from "react"
 import {XCircleIcon} from  '@heroicons/react/24/solid'
 import { ShoppingCartContext } from "..//../Context"
 import OrderCard from "../../Components/OrderCard"
+import { totalPrice } from "../../utils"
 
 
 const ChekoutSideMenu = () => {
@@ -26,7 +27,7 @@ const context = useContext(ShoppingCartContext)
                 ></XCircleIcon>
                 </div>
             </div>
-            <div className="px-6  ">
+            
             {
                 context.cartProducts.map((product) => (
                     <OrderCard 
@@ -39,6 +40,13 @@ const context = useContext(ShoppingCartContext)
                     />
                 ))
             }
+            <div className="px-6  ">
+                <div className="px-6">
+                <p className="flex justify-between items-center">
+                    <span className="font-light">Total: </span>
+                    <span>${totalPrice(context.cartProducts)}</span>
+                </p>
+                </div>
 
             </div>
         </aside>
