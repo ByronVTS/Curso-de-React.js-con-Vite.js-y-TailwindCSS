@@ -24,6 +24,9 @@ export const ShoppingCartProvider = ({ children }) => {
 
         //Seccion donde se pone los productos en el carrito
     const [cartProducts, setcartProducts] = useState([])
+    
+    // Shopping card order --- clase 21
+    const [order, setOrder] = useState([])
 
     return (
         <ShoppingCartContext.Provider value={{
@@ -38,7 +41,9 @@ export const ShoppingCartProvider = ({ children }) => {
             setcartProducts,
             isCheckoutSideMenuOpen,
             openCheckoutSideMenu,
-            closeCheckoutSideMenu
+            closeCheckoutSideMenu,
+            order, // clase 21
+            setOrder, // clase 21
         }}>
             {children}
         </ShoppingCartContext.Provider>

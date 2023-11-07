@@ -7,13 +7,25 @@ import OrderCard from "../../Components/OrderCard"
 import { totalPrice } from "../../utils" // agregado de la clase 20 
 
 
-const ChekoutSideMenu = () => {
+const CheckoutSideMenu = () => {
 const context = useContext(ShoppingCartContext)
 
 //el handelete fue echo en la clase 19 
     const handleDelete = (id) => {
         const filteredProducts = context.cartProducts.filter(product => product.id != id)
         context.setcartProducts(filteredProducts)
+    }
+        // Clase 21
+    const handleCheckout = () =>    {
+        const orderToAdd = {
+            date: "7/11/2023",
+            products: context.cartProducts,
+            totalProducts: context.cartProducts.length,
+            totalPrice:totalPrice(context.cartProducts)
+        }
+
+        context.setOrder([...context.order, orderToAdd])
+        context.setCartProducts([]) // limpiamos la lista 
     }
 
     return (
@@ -49,6 +61,8 @@ const context = useContext(ShoppingCartContext)
                     <span className="font-light">Total: </span>
                     <span className="font-medium text-2x1"> ${totalPrice(context.cartProducts)}</span>
                 </p>
+                {/* Clase 21 */}
+                <button className= "bg-black w-full py-3 text-white  rounded-lg "onClick={() => handleCheckout()}>Checkout</button>
                 </div>
 
             </div>
@@ -56,4 +70,4 @@ const context = useContext(ShoppingCartContext)
     )
 }
 
-export default ChekoutSideMenu
+export default CheckoutSideMenu
