@@ -4,12 +4,13 @@ import { useContext } from "react"
 import {XCircleIcon} from  '@heroicons/react/24/solid'
 import { ShoppingCartContext } from "..//../Context"
 import OrderCard from "../../Components/OrderCard"
-import { totalPrice } from "../../utils"
+import { totalPrice } from "../../utils" // agregado de la clase 20 
 
 
 const ChekoutSideMenu = () => {
 const context = useContext(ShoppingCartContext)
 
+//el handelete fue echo en la clase 19 
     const handleDelete = (id) => {
         const filteredProducts = context.cartProducts.filter(product => product.id != id)
         context.setcartProducts(filteredProducts)
@@ -40,11 +41,13 @@ const context = useContext(ShoppingCartContext)
                     />
                 ))
             }
+
+            {/* agregado de la clase 20 */}
             <div className="px-6  ">
                 <div className="px-6">
                 <p className="flex justify-between items-center">
                     <span className="font-light">Total: </span>
-                    <span>${totalPrice(context.cartProducts)}</span>
+                    <span className="font-medium text-2x1"> ${totalPrice(context.cartProducts)}</span>
                 </p>
                 </div>
 
