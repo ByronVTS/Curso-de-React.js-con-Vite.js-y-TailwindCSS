@@ -1,5 +1,6 @@
 import "./style.css"
 import { useContext } from "react"
+import {Link} from "react-router-dom" //Clase 22
 //Importamos el icono en con su nombre directamente como si fuese un componente 
 import {XCircleIcon} from  '@heroicons/react/24/solid'
 import { ShoppingCartContext } from "..//../Context"
@@ -40,7 +41,7 @@ const context = useContext(ShoppingCartContext)
                 ></XCircleIcon>
                 </div>
             </div>
-            
+            <div className="px-6 overflow-y-scroll flex-1">                
             {
                 context.cartProducts.map((product) => (
                     <OrderCard 
@@ -53,6 +54,7 @@ const context = useContext(ShoppingCartContext)
                     />
                 ))
             }
+            </div>
 
             {/* agregado de la clase 20 */}
             <div className="px-6  ">
@@ -61,8 +63,11 @@ const context = useContext(ShoppingCartContext)
                     <span className="font-light">Total: </span>
                     <span className="font-medium text-2x1"> ${totalPrice(context.cartProducts)}</span>
                 </p>
+                {/* Clase 22 */}
+                <link to="/my-orders/last">
                 {/* Clase 21 */}
                 <button className= "bg-black w-full py-3 text-white  rounded-lg "onClick={() => handleCheckout()}>Checkout</button>
+                </link>
                 </div>
 
             </div>
