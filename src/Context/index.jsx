@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from 'react'
 
 export const ShoppingCartContext = createContext()
 
+// este export es todo todo!!!
 export const ShoppingCartProvider = ({children}) => {
   // Shopping Cart · Increment quantity
   const [count, setCount] = useState(0)
