@@ -48,7 +48,8 @@ const Card = (data) => {
         >
             <figure className='relative mb-2 w-full h-4/5'>
                 <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs p-1 m-2'>{data.data.category.name}</span>
-                <img src={data.data.images} alt={data.data.title} className="object-cover h-[100%] w-full rounded-lg"  />
+                {/* <img src={data.data.images} alt={data.data.title} className="object-cover h-[100%] w-full rounded-lg"  /> */}
+                <img src="../../../392936794_670490168510856_2428849202633423582_n.jpg" alt={data.data.title} className="object-cover h-[100%] w-full rounded-lg"  />
                 {
                     renderIcon(data.data.id)
                 }

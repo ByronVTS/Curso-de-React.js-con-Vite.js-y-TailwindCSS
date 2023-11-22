@@ -3,31 +3,35 @@ import { createContext, useState, useEffect } from 'react'
 export const ShoppingCartContext = createContext()
 
 export const initializeLocalStorge = () => {
-
+  //Obtenemos el contenido de dos claves 
   const accountInLocalStorage = localStorage.getItem("account")
   const signOutInLocalStorage = localStorage.getItem("sign-out")
+  //Creamos las 2 variables donde almacenamos los datos despues de procesarlos 
   let parsedAccount
   let parsedSignOut
-
+  // verificamos si el valor obtenido de account en la consulta en localStorage  es null o undefined , de ser asi establecemos un objeto vacio  como valor  para la clave de account  utilizando "localStofrage.setItem" y asigna  tambien  un objeto vacio a "parsedAccount"
   if(!accountInLocalStorage) {
     localStorage.setItem('account', JSON.stringify({}))
     parsedAccount = {}
+    //Si hay un valor para "account" en el localStorage, se utiliza JSON.parse para convertirlo de una cadena JSON a un objeto JavaScript y se asigna a parsedAccount.
   }else{
     parsedAccount = JSON.parse(accountInLocalStorage)
   }
-
+  //se verifica si el valor obtenido de localStorage para "sign-out" es null o undefined. Si es así, se establece el valor false como cadena JSON para la clave "sign-out" utilizando localStorage.setItem, y se asigna false a parsedSignOut.
   if(!signOutInLocalStorage) {
     localStorage.setItem('sign-out', JSON.stringify(false))
     parsedSignOut = false
-    }else{
+  }else{
+    //Si hay un valor para "sign-out" en el localStorage, se utiliza JSON.parse para convertirlo de una cadena JSON a un valor booleano de JavaScript y se asigna a parsedSignOut.
     parsedSignOut = JSON.parse(signOutInLocalStorage)
   }
 }
 
 // este export es todo todo!!!
 export const ShoppingCartProvider = ({children}) => {
+  
   //My account
-  const [account , setAccount] = useState({})
+  const [account , setAccount] = useState({}) 
 
   //Sign out 
   const [signOut , setSignOut] = useState(false)
@@ -104,6 +108,7 @@ export const ShoppingCartProvider = ({children}) => {
   }, [items, searchByTitle, searchByCategory])
 
   return (
+    // El Provider nos permite tener estados globales y poder usarlo donde nos de la regalada gana :)
     <ShoppingCartContext.Provider value={{
       count,
       setCount,

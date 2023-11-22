@@ -8,8 +8,11 @@ const Navbar = () => {
   const activeStyle = 'underline underline-offset-4'
 
   const handleSignOut = () => {
+    // se comvierte el valor booleano "true" en una cadena JSON
     const stringifiedSignOut = JSON.stringify(true)
+     // Se establece en el localStorage el valor 'true' convertido a cadena bajo la clave "sign-out"
     localStorage.setItem("sign-out", stringifiedSignOut)
+    // Se llama  a context.setSingOut para asignarle el valor de true 
     context.setSingOut(true)
   }
 
