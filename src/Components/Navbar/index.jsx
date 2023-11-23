@@ -19,8 +19,8 @@ const isUserSignOut = context.signOut || parserdSignOut
     const stringifiedSignOut = JSON.stringify(true)
      // Se establece en el localStorage el valor 'true' convertido a cadena bajo la clave "sign-out"
     localStorage.setItem("sign-out", stringifiedSignOut)
-    // Se llama  a context.setSingOut para asignarle el valor de true 
-    context.setSingOut(true)
+    // Se llama  a context.setSignOut para asignarle el valor de true 
+    context.setSignOut(true)
   }
 
   const rederView = () => {
@@ -61,7 +61,7 @@ const isUserSignOut = context.signOut || parserdSignOut
     </li>
     <li>
       <NavLink
-        to='/sing-in'
+        to='/sign-in'
         className={({ isActive }) =>
           isActive ? activeStyle : undefined
         }
