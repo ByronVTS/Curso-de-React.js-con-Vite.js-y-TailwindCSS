@@ -1,6 +1,6 @@
 import { useContext, useState, useRef } from "react";
 import Layout from "../../Components/Layout";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { ShoppingCartContext } from "../../Context";
 
 function SignIn() {
@@ -15,6 +15,14 @@ function SignIn() {
   const noAccountInLocalState = context.account ? Object.keys(context.account).length === 0 : true
   const hasUserAnAccount = !noAccountInLocalStorage || !noAccountInLocalState;
 
+  const handleSignIn = () => {
+      const stringifiedSignOut = JSON.stringify(false)
+      localStorage.setItem("sign-out", stringifiedSignOut)
+      context.setSignOut(false) 
+      //redict
+      return <Navigate replace to="../"></Navigate>
+  }
+
   const createAnAccount = () => {
     const formData = new FormData(form.current)
     const data = {
@@ -22,7 +30,11 @@ function SignIn() {
       email: formData.get("email"),
       password: formData.get("password")
     }
-    console.log(data);
+    const stringifiedAccount = JSON.stringify(data)
+    localStorage.setItem("account", stringifiedAccount)
+    context.setAccount(data)
+    //sign in
+    handleSignIn()
   }
   // Esta función devuelve el contenido que parece ser la vista de inicio de sesión
  
@@ -38,7 +50,10 @@ function SignIn() {
               <span>{parsedAccount?.password}</span>
             </p>
             <Link to="/">
-              <button className="bg-black text-white w-full rounded-lg py-3 mt-4 mb-2" disabled={!hasUserAnAccount}>
+              <button 
+                className="bg-black text-white w-full rounded-lg py-3 mt-4 mb-2" 
+                disabled={!hasUserAnAccount}
+                onClick={() => handleSignIn()}>
                 Login
               </button>
             </Link>
