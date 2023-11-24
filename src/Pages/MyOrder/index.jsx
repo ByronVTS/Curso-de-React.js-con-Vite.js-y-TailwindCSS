@@ -29,7 +29,7 @@ if(index == "last") index = context.order?.length - 1
               key={product.id}
               id={product.id}
               title={product.title}
-              imageUrl="../../../392936794_670490168510856_2428849202633423582_n.jpg"
+              imageUrl={product.images}
               price={product.price}
             />
           ))
